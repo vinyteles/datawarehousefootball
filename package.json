@@ -1,0 +1,6 @@
+{
+  "name": "dw2",
+  "dependencies": {
+    "@dataform/core": "2.4.2"
+  }
+}

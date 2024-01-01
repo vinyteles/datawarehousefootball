@@ -1,5 +1,5 @@
 {
-  "defaultSchema": "dataform",
+  "defaultSchema": "football_dw_inf2",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "dw-inf",

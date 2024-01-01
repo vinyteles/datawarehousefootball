@@ -1,0 +1,10 @@
+config {
+    type: "table",
+    name: "coach"
+}
+
+SELECT
+  pv.player_valuation_id,
+  () AS manager
+FROM
+  football_bdo_inf2.player_valuations pv

@@ -1,0 +1,14 @@
+config {
+    type: "table",
+    name: "player_valuations"
+}
+
+SELECT
+  GENERATE_UUID() as player_valuation_id,
+  date AS date_id,
+  player_id,
+  current_club_id,
+  player_club_domestic_competition_id AS domestic_competition_id,
+  market_value_in_eur AS market_value
+FROM
+  football_bdo_inf2.player_valuations

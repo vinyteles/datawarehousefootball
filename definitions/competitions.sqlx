@@ -1,0 +1,13 @@
+config {
+    type: "table",
+    name: "competitions"
+}
+
+SELECT
+  competition_id,
+  name,
+  type,
+  sub_type,
+  country_name
+FROM
+  football_bdo_inf2.competitions

@@ -1,0 +1,10 @@
+config {
+    type: "table",
+    name: "clubs"
+}
+
+SELECT
+  club_id,
+  name
+FROM
+  football_bdo_inf2.clubs

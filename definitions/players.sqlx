@@ -1,0 +1,16 @@
+config {
+    type: "table",
+    name: "players"
+}
+
+SELECT
+  player_id,
+  name,
+  position,
+  sub_position,
+  country_of_birth,
+  city_of_birth,
+  country_of_citizenship,
+  date_of_birth
+FROM
+  football_bdo_inf2.players

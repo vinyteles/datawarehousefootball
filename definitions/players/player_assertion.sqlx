@@ -1,0 +1,14 @@
+config {
+    type: "assertion",
+    dependencies: ["players"]
+}
+
+SELECT
+  *
+FROM
+  dw-inf.football_dw_inf2.players
+WHERE
+  country_of_birth IS NULL
+  OR city_of_birth IS NULL
+  OR country_of_citizenship IS NULL
+  OR date_of_birth IS NULL

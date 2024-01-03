@@ -1,0 +1,18 @@
+config {
+    type: "table",
+    name: "appearances"
+}
+
+SELECT
+  appearance_id,
+  game_id,
+  player_id,
+  player_club_id,
+  date,
+  competition_id,
+  goals,
+  yellow_cards,
+  red_cards,
+  minutes_played
+FROM
+  football_bdo_inf2.appearances

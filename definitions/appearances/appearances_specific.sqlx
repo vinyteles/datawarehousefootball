@@ -1,0 +1,16 @@
+config {
+    type: "view"
+}
+
+SELECT
+  player_id,
+  date,
+  COUNT(game_id) AS games,
+  SUM(goals) AS goals,
+  SUM(yellow_cards) AS yellow_cards,
+  SUM(red_cards) AS red_cards,
+  SUM(minutes_played) AS minutes_played
+FROM
+  football_bdo_inf2.appearances
+GROUP BY
+  player_id

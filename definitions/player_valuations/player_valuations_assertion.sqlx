@@ -1,0 +1,12 @@
+config {
+    type: "assertion",
+    dependencies: ["player_valuations"]
+}
+
+SELECT
+  *
+FROM
+  football_dw_inf2.player_valuations
+WHERE
+  goals IS NULL OR yellow_cards IS NULL
+  OR red_cards IS NULL

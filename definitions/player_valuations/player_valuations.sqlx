@@ -1,0 +1,19 @@
+config {
+    type: "table",
+    name: "player_valuations",
+    dependencies: ["appearances"]
+}
+
+SELECT
+  GENERATE_UUID() AS player_valuation_id,
+  pv.date AS date_id,
+  pv.player_id,
+  pv.current_club_id,
+  pv.player_club_domestic_competition_id AS domestic_competition_id,
+  pv.market_value_in_eur AS market_value,
+  ${utils.find("COUNT", "player_id", "game_id", "date", "pv", "appearances")} AS games,
+  ${utils.find("SUM", "player_id", "goals", "date", "pv", "appearances")} AS goals,
+  ${utils.find("SUM", "player_id", "yellow_cards", "date", "pv", "appearances")} AS yellow_cards,
+  ${utils.find("SUM", "player_id", "red_cards", "date", "pv", "appearances")} AS red_cards,
+FROM
+  football_bdo_inf2.player_valuations pv

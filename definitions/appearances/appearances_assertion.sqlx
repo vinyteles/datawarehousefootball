@@ -1,0 +1,19 @@
+config {
+    type: "assertion",
+    dependencies: ["appearances"]
+}
+
+SELECT
+  *
+FROM
+  football_dw_inf2.appearances
+WHERE
+  appearance_id IS NULL
+  OR game_id IS NULL
+  OR player_id IS NULL
+  OR player_club_id IS NULL
+  OR date IS NULL
+  OR competition_id IS NULL
+  OR yellow_cards IS NULL
+  OR red_cards IS NULL
+  OR minutes_played IS NULL
